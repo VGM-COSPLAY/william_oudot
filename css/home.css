@@ -1,3 +1,4 @@
+/* ===== GLOBAL ===== */
 body {
     font-family: Arial, sans-serif;
     color: #fff;
@@ -9,16 +10,18 @@ body {
 .home-hero {
     height: 100vh;
     width: 100%;
-    background: url('images/fond_home_desktop.jpg') no-repeat center center;
+    background: url('images/fond_home_mobile.jpg') no-repeat center center;
     background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* contenu depuis le haut */
-    align-items: center;         /* centré horizontalement */
-    padding-top: 400px;          /* espace depuis le haut */
+    justify-content: flex-start; 
+    align-items: center;         
+    padding-top: 800px;      /* mobile OK */
     box-sizing: border-box;
 }
 
+
+/* ===== SLOGAN ===== */
 .slogan-box {
     background: rgba(0,0,0,0.75);
     padding: 20px 30px;
@@ -28,16 +31,17 @@ body {
 }
 
 .slogan-box h1 {
-    font-size: 2.5em;
+    font-size: 1.8em; /* mobile plus petit */
 }
 
+/* ===== BOUTONS ===== */
 .buttons-container {
     display: flex;
-    gap: 40px;
-    margin-top: 50px;       /* descend les boutons sous le slogan */
-    justify-content: center; /* centre horizontalement */
+    gap: 20px;
+    margin-top: 30px;        /* mobile OK */
+    justify-content: center; 
     width: 100%;
-    max-width: 900px;
+    max-width: 400px;
 }
 
 .button-block {
@@ -46,11 +50,12 @@ body {
     align-items: center;
 }
 
+
 .button-block a {
     display: block;
-    width: 200px;   /* taille des boutons */
+    width: 150px;   
     height: auto;
-    border-radius: 25px;
+    border-radius: 20px;
     overflow: hidden;
 }
 
@@ -61,37 +66,39 @@ body {
 }
 
 .button-title {
-    margin-top: 10px;
+    margin-top: 8px;
     font-weight: bold;
     text-align: center;
 }
-
 
 .button-block a:hover {
     transform: scale(1.05);
 }
 
+/* ===== DESKTOP / TABLETTE LARGE ===== */
 @media screen and (min-width: 1024px) {
     .home-hero {
         background: url("images/fond_home_desktop.jpg") center center no-repeat;
         background-size: cover;
+        padding-top: 400px; 
     }
 
     .slogan-box h1 {
-        font-size: 2.5em;
+        font-size: 2.5em; 
     }
 
     .buttons-container {
+        flex-direction: row;   
         gap: 40px;
         width: 70%;
-        margin-top: 40px; /* réduit l’espace entre slogan et boutons */
-        justify-content: center; /* reste centré horizontalement */
+        margin-top: 80px; 
+        justify-content: center; 
+        flex-wrap: nowrap;     
     }
 
     .button-block a {
-        border-radius: 25px;
+        width: 200px;
         max-width: 400px;
+        border-radius: 25px;
     }
 }
-
-
