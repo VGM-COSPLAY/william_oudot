@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* =========================
    HOME HERO (MOBILE PAR DÉFAUT)
 ========================= */
@@ -92,3 +93,75 @@
         height: 80px;
     }
 }
+=======
+.home-hero {
+    height: 100vh;
+    background: url("images/fond_home_mobile.jpg") center center no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+/* SLOGAN */
+.slogan-box {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.75);
+    padding: 15px 20px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 90%;
+}
+
+.slogan-box h1 {
+    font-size: 1.6em;
+    white-space: normal;
+}
+
+/* BOUTONS */
+.buttons-container {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    align-items: center;
+}
+
+.buttons-container a {
+    width: 200px;
+    height: 55px;
+    border-radius: 18px;
+}
+
+@media (min-width: 768px) {
+    .home-hero {
+        background: url("images/fond_home_mobile.jpg") center center no-repeat;
+        background-size: cover;
+    }
+
+    .slogan-box {
+        top: 60%;
+    }
+
+    .slogan-box h1 {
+        font-size: 2.5em;
+    }
+
+    .buttons-container {
+        flex-direction: row;
+        gap: 40px;
+        top: 75%;
+    }
+
+    .buttons-container a {
+        width: 200px;
+        height: 80px;
+    }
+}
+>>>>>>> 374388f (Initial commit site test)
