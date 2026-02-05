@@ -1,0 +1,94 @@
+/* =========================
+   HOME HERO (MOBILE PAR DÉFAUT)
+========================= */
+.home-hero {
+    height: 100vh;
+    background: url("images/fond_home_mobile.jpg") center center no-repeat;
+    background-size: contain;  /* conserve l'image entière pour mobile */
+    position: relative;
+    overflow: hidden;
+}
+
+/* =========================
+   SLOGAN
+========================= */
+.slogan-box {
+    position: absolute;
+    left: 50%;
+    top: 67%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.75);
+    padding: 20px 30px;
+    border-radius: 25px;
+    text-align: center;
+    max-width: 90%;
+}
+
+.slogan-box h1 {
+    margin: 0;
+    font-size: 2em;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* =========================
+   BOUTONS IMAGE
+========================= */
+.buttons-container {
+    position: absolute;
+    left: 50%;
+    top: 82%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column; /* mobile = empilement vertical */
+    gap: 20px;
+    width: 70%;
+    align-items: center;
+}
+
+.buttons-container a {
+    display: inline-block;
+    width: 100%;
+    max-width: 300px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 25px;
+    transition: transform 0.3s;
+}
+
+.buttons-container a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.buttons-container a:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   MEDIA QUERY POUR DESKTOP
+========================= */
+@media screen and (min-width: 1024px) {
+    .home-hero {
+        background: url("images/fond_home_desktop.jpg") center center no-repeat;
+        background-size: cover; /* plein écran pour desktop */
+    }
+
+    .slogan-box h1 {
+        font-size: 2.5em;
+    }
+
+    .buttons-container {
+        flex-direction: row; /* boutons côte à côte */
+        gap: 40px;
+        width: auto;
+    }
+
+    .buttons-container a {
+        width: 200px;
+        height: 80px;
+    }
+}

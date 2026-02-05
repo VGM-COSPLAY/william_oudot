@@ -1,0 +1,104 @@
+.home-hero {
+    height: 200vh;
+    width: 100%;
+    background: url("images/fond_dessin.jpg") center center no-repeat;
+    background-size: cover;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+    line-height: 1.5;
+}
+
+
+
+/* =========================
+   BOUTON RETOUR
+========================= */
+.back-btn {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.back-btn:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: rgba(0,0,0,0.85);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo img {
+    height: 120px;
+}
+
+.burger {
+    display: none; /* pas besoin du burger sur desktop */
+    font-size: 2em;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* MENU NAV DESKTOP */
+nav#menu {
+    display: flex;
+    gap: 30px;
+}
+
+nav#menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+nav#menu a:hover {
+    color: #ffcc00;
+}
+
+
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    padding: 40px;
+    background-color: rgba(0,0,0,0.85);
+    text-align: center;
+}
+
+footer h4 {
+    font-weight: normal;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+
+
