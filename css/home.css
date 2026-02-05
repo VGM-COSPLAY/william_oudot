@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /* HOME HERO */
 .home-hero {
     min-height: 100vh;
@@ -99,46 +99,48 @@
     }
 }
 
-=======
+
 /* HOME HERO */
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    background-color: #111; /* fallback si l'image ne charge pas */
+}
+
+
 .home-hero {
-    min-height: 100vh;
-    background: url("images/fond_home_mobile.jpg") center center no-repeat;
-    background-size: contain;
+    height: 100vh;
+    width: 100%;
+    background: url('images/fond_home_desktop.jpg') no-repeat center center;
+    background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* centre verticalement */
-    align-items: center;
-    padding: 20px;
+    justify-content: flex-start; /* contenu depuis le haut */
+    align-items: center;         /* centré horizontalement */
+    padding-top: 400px;          /* espace depuis le haut */
     box-sizing: border-box;
 }
 
-/* SLOGAN */
 .slogan-box {
     background: rgba(0,0,0,0.75);
     padding: 20px 30px;
     border-radius: 25px;
     text-align: center;
-    margin-bottom: 30px; /* espace entre slogan et boutons */
     max-width: 90%;
 }
 
 .slogan-box h1 {
-    margin: 0;
-    font-size: 2em;
-    line-height: 1.2;
-    color: #fff;
-    text-align: center;
+    font-size: 2.5em;
 }
 
-/* BOUTONS + TITRES */
 .buttons-container {
     display: flex;
-    flex-direction: row; /* horizontal sur mobile aussi */
-    gap: 15px;
-    flex-wrap: wrap; /* passe à la ligne si trop large sur mobile */
-    justify-content: center;
-    align-items: flex-start;
+    gap: 40px;
+    margin-top: 50px;       /* descend les boutons sous le slogan */
+    justify-content: center; /* centre horizontalement */
     width: 100%;
     max-width: 900px;
 }
@@ -151,28 +153,36 @@
 
 .button-block a {
     display: block;
+    width: 200px; 
+    height: auto;
+    border-radius: 25px;
     overflow: hidden;
-    border-radius: 15px;
-    transition: transform 0.3s;
-    max-width: 300px;   /* largeur max pour mobile */
-    width: 100%;        /* prend tout l'espace disponible jusqu'à max-width */
-    height: auto;       /* garde les proportions de l'image */
+    transition: transform 0.2s ease; /* transition pour l'effet smooth */
 }
 
+/* Effet au survol */
+.button-block a:hover {
+    transform: scale(1.05); /* zoom léger au survol */
+}
+
+/* Effet au clic */
+.button-block a:active {
+    transform: scale(1.1); /* zoom un peu plus fort quand on clique */
+}
+
+
 .button-block a img {
-    display: block;
     width: 100%;
-    height: auto;       /* conserve les proportions */
+    height: auto;
     object-fit: cover;
 }
 
 .button-title {
     margin-top: 10px;
-    font-size: 1.2em;
     font-weight: bold;
-    color: #fff;
     text-align: center;
 }
+
 
 .button-block a:hover {
     transform: scale(1.05);
@@ -199,5 +209,3 @@
         max-width: 400px;
     }
 }
-
->>>>>>> 374388f (Initial commit site test)
