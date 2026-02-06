@@ -7,22 +7,31 @@ body {
     background-color: #111; /* fallback si l'image ne charge pas */
 }
 
+/* =========================
+   HOME HERO – MOBILE FIRST
+========================= */
 .home-hero {
     height: 100vh;
     width: 100%;
-    background: url('images/fond_home_mobile.jpg') no-repeat center center;
-    background-size: cover;
+    background: url("images/fond_home_mobile.jpg") center center no-repeat;
+    background-size: cover;       /* couvre tout l'écran */
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; 
-    align-items: center;         
-    padding-top: 800px;      /* mobile OK */
+    justify-content: flex-start;  /* commence depuis le haut */
+    align-items: center;
+    padding-top: 350px;           /* espace pour le slogan sur mobile */
     box-sizing: border-box;
 }
 
-
-/* ===== SLOGAN ===== */
+/* =========================
+   SLOGAN – PAVÉ MOBILE
+========================= */
 .slogan-box {
+    position: relative;           /* relatif pour mobile */
+    left: auto;
+    top: auto;
+    transform: none;
     background: rgba(0,0,0,0.75);
     padding: 20px 30px;
     border-radius: 25px;
@@ -31,17 +40,23 @@ body {
 }
 
 .slogan-box h1 {
-    font-size: 1.8em; /* mobile plus petit */
+    font-size: 1.8em;
+    margin: 0;
+    line-height: 1.2;
+    text-align: center;
 }
 
-/* ===== BOUTONS ===== */
+/* =========================
+   BOUTONS – DEUX IMAGES
+========================= */
 .buttons-container {
     display: flex;
+    flex-direction: column;       /* mobile : colonne */
     gap: 20px;
-    margin-top: 30px;        /* mobile OK */
-    justify-content: center; 
+    margin-top: 30px;             /* espace entre slogan et boutons */
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    max-width: 400px;
 }
 
 .button-block {
@@ -50,13 +65,13 @@ body {
     align-items: center;
 }
 
-
 .button-block a {
     display: block;
-    width: 150px;   
+    width: 150px;   /* taille bouton mobile */
     height: auto;
-    border-radius: 20px;
     overflow: hidden;
+    border-radius: 0;           /* pas de contour */
+    background: none;           /* pas de fond */
 }
 
 .button-block a img {
@@ -71,34 +86,38 @@ body {
     text-align: center;
 }
 
+/* =========================
+   HOVER – EFFET
+========================= */
 .button-block a:hover {
     transform: scale(1.05);
+    transition: transform 0.3s;
 }
 
-/* ===== DESKTOP / TABLETTE LARGE ===== */
+/* =========================
+   DESKTOP – TABLETTE LARGE
+========================= */
 @media screen and (min-width: 1024px) {
     .home-hero {
         background: url("images/fond_home_desktop.jpg") center center no-repeat;
         background-size: cover;
-        padding-top: 400px; 
+        padding-top: 400px;       /* espace pour slogan desktop */
     }
 
     .slogan-box h1 {
-        font-size: 2.5em; 
+        font-size: 2.5em;
     }
 
     .buttons-container {
-        flex-direction: row;   
+        flex-direction: row;      /* desktop : boutons côte à côte */
         gap: 40px;
-        width: 70%;
-        margin-top: 80px; 
-        justify-content: center; 
-        flex-wrap: nowrap;     
+        margin-top: 80px;
+        justify-content: center;
+        align-items: center;
     }
 
     .button-block a {
-        width: 200px;
+        width: 200px;             /* bouton desktop */
         max-width: 400px;
-        border-radius: 25px;
     }
 }
