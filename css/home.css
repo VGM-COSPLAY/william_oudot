@@ -20,7 +20,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;  /* commence depuis le haut */
     align-items: center;
-    padding-top: 350px;           /* espace pour le slogan sur mobile */
+    padding-top: 150px;           /* espace pour le slogan sur mobile */
     box-sizing: border-box;
 }
 
